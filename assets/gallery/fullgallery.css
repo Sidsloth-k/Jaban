@@ -1,18 +1,11 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
 
 a {
   color:var(--shadow-color);
+}
+
+.gallery
+{
+  margin: 0;
 }
 
 .row {
@@ -159,6 +152,7 @@ a {
   -moz-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
+
 .item_open .close {
   opacity: 1;
   top: 0px;
