@@ -2,10 +2,7 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-});
+
 
 /* Scroll Sections Active Link */
 let sections = document.querySelectorAll('section');
@@ -28,12 +25,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-/* Sticky Navbar */
-let header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
-    header.classList.toggle('sticky', window.scrollY > 100);
-});
 
 /* Remove Menu Icon Navbar When Click Navbar Link (Scroll) */
 navLinks.forEach(link => {
@@ -41,7 +33,18 @@ navLinks.forEach(link => {
         menuIcon.classList.remove('bx-x');
         navbar.classList.remove('active');
     });
+    
 });
+
+$("#header").prepend(
+    '<div id="menu-icon"><span class="first"></span><span class="second"></span><span class="third"></span></div>'
+  );
+  
+  $("#menu-icon").on("click", function () {
+    $("nav").slideToggle();
+    $(this).toggleClass("active");
+  });
+  
 
 /* Swiper */
 var swiper = new Swiper(".mySwiper", {
